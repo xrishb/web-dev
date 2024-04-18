@@ -1,0 +1,31 @@
+/* universal selector */
+* {
+    border: 1px solid red;
+}
+/* body selector */
+body {
+    font-size: 22px;
+}
+/* element selector */
+h1 {
+    color: blue;
+}
+/* dont use !important flag, overrides every shit */
+h1 {
+    color: chartreuse !important ;
+}
+/* class selectors */
+.ci {
+    color: red;
+}
+/* id selector */
+#ii {
+    color: orchid;
+}
+/* nested element selector */
+article span {
+    text-decoration: underline;
+    color: blue;
+    text-transform: uppercase;
+    background-color: greenyellow;
+}

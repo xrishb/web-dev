@@ -1,0 +1,25 @@
+body {
+    padding: 10%;
+}
+
+input, button {
+    /* usually inputs or forms won't directly inherit any typography , we have to manually inherit it. */
+    font: inherit;
+}
+h2 {
+    text-transform: uppercase;
+}
+p {
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1em;
+    word-spacing: 2em;
+    cursor: pointer;
+}
+
+/* pseudo class */
+p:hover {
+    color: red;
+    
+}
+

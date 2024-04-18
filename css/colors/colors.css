@@ -1,0 +1,12 @@
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    background-color: antiquewhite;
+    color: red; /*font or forground color*/
+}
+
+article {
+    color: #333
+}

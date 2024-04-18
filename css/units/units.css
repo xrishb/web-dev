@@ -1,0 +1,26 @@
+/* 
+h1 {
+    absolute units: should not be used for responsive web pages's font
+    font-size: 42px;
+}
+*/
+
+/* % should be used for sizing of elements such as height or width */
+body {
+    /* 100% is default */
+    width: 100%;
+    font-size: 3em;
+}
+
+h1 {
+    font-size: 2em;
+    border: 2px solid red;
+    width: 90%;
+}
+
+/* relative units */
+article {
+    /* 1 rem = default size (16px) */
+    /* rem is more suitable for responsive pages */
+    font-size: 2rem;
+} 
