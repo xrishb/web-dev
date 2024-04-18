@@ -1,0 +1,81 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2 {
+    color:rgb(255, 111, 0);
+}
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: rgb(76, 4, 135);
+    text-align: center;
+}
+
+/* Navigation List Styles */
+ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation Item Styles */
+li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+/* Navigation Link Styles */
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px; /* Add padding for clickable area */
+    display: inline-block; /* Ensure each link takes up full space */
+}
+a:hover {
+    color: rgb(31, 136, 240);
+    transition: .2s ease-in-out;
+}
+
+/* Adjust last item's margin */
+li:last-child {
+    margin-right: 0;
+}
+/* Search Input Styles */
+input[type="search"] {
+    font-family: 'Poppins', sans-serif;
+    border-radius: .2rem ;
+    font-size: 1.1rem;
+    padding: 8px; /* Add padding for better spacing */
+    width: 200px; /* Adjust width as needed */
+    outline: none;
+    transition: all 0.5s ease;
+}
+input[type="search"]:focus {
+    outline: none;
+    
+}
+
+/* Search Button Styles */
+button[type="submit"] {
+    background-color: #00b27f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: .2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #01986d;
+}
