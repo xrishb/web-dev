@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="#" id="myform">
+            <h2>Sign in</h2>
+            <div class="info">
+                <p>Sign in to stay connected!</p>
+            </div>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Your password" required minlength="6" maxlength="14">
+            
+            <a href="forgot_password.html">Forgot password?</a>
+            
+            <button type="submit">Sign in</button>
+            
+            <p>or</p>
+            
+            <button class="gmail-btn">Sign in using Gmail</button>
+        </form>
+    </div>
+</body>
+</html>
