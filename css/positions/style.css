@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+/* depends on parent's pos */
+.absolute {
+    background-color: #00f;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* is relative */
+.relative {
+    background-color: red;
+    position: relative;
+}
+
+/* doesnt care about parent pos */
+.fixed {
+    position: fixed;
+    background-color: blueviolet;
+}
+.sticky {
+    background-color: tomato;
+    color:black;
+    position: sticky;
+    top: 0;
+}

@@ -1,0 +1,21 @@
+body {
+    font-size: .9rem;
+    font-family: 'Roboto', monospace;
+}
+.container {
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 3px solid blue;
+    break-inside: avoid;
+    break-before: avoid;
+}
+.quote {
+    font-size: 2rem;
+    font-weight: bold;
+    column-span: all;
+    text-align: center;
+}
+span {
+    
+    white-space: nowrap;
+}
