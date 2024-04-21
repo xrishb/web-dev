@@ -33,3 +33,46 @@ if(age >= MIN_AGE) {
 else {
     console.log("entry is declined, because age wasn't a number value");
 }
+
+// type conversion
+let underage = false;
+underage = String(underage);
+console.log(typeof(underage)); // now converted into string
+
+// numerical conversions are said to be converted automatically, still we can convert it using Number()s and will not convert string values.
+
+underage = Number(underage);
+console.log(typeof(underage));
+
+// boolean convertions are simple, if some variable contains some value it will converted into TRUE otherwise false.
+// empty values are simply FALSE
+
+
+// operators
+
+let a = 5, b = 10;
+console.log(a+b);
+console.log(a-b);
+console.log(a/b);
+console.log(a*b);
+console.log(a%b);
+console.log(a**b); // exponent
+
+
+// string concatination with binary +
+let msg = " hello " + "  world ";
+console.log(msg);
+
+// if one of the values is string , it will be converted to string, order doesnt matter here. 
+
+// unary?
+let apples = "2";
+let mangoes = "3";
+
+// unary + converted the values into number values
+console.log(+apples + +mangoes); 
+
+// string comparison is based on lexicographic values or character values. a = 1 and z = 26
+
+let ch_a = "a", ch_z = "z";
+console.log(a > b); // will print false, because z's value is higher. ah UNICODE-ORDER
