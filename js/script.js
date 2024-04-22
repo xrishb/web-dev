@@ -214,3 +214,10 @@ console.log(cars.pop()); // returns the popped value, will output: buggati
 cars.push("lambo"); // will return length of array
 
 
+const ASIA = ["india", "nepal", "japan"];
+const USA = ["america", "canada"];
+
+// concat two arrays
+const COUNTRIES = ASIA .concat(USA); // concat returns new array
+console.log(COUNTRIES);
+
