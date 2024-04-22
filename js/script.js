@@ -160,3 +160,27 @@ delete user.section;
 //     console.log(key);
 // } 
 
+
+// HOISTING: in javascript a variable can be declared after its used. let and const are not used as they will throw REFERENCE ERROR
+// var x;
+// console.log(x);
+// x = 5; lets not use hoisting lol
+
+
+// ASYNC - AWAIT. wait for something but the rest of program will continue except this specific function
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Example async function using await
+async function myAsyncFunction() {
+    console.log("Start");
+    await delay(2000); // Pause for 2 seconds (2000 milliseconds)
+    console.log("Middle");
+    await delay(1000); // Pause for 1 second
+    console.log("End");
+}
+
+// Call the async function
+myAsyncFunction();
