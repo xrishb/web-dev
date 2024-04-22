@@ -114,14 +114,48 @@ let ch_a = "a", ch_z = "z";
 
 
 // callback functions
-function askQuestion(question, yes, no) {
-    if(confirm(question)) yes()
-    else no();
+// function askQuestion(question, yes, no) {
+//     if(confirm(question)) yes()
+//     else no();
+// }
+// function showOk() {
+//     console.log("you agreed");
+// }
+// function showCancel() {
+//     console.log("you cancelled");
+// }
+// askQuestion("do you agree", showOk, showCancel());
+
+
+// arrow functions : reduces the code size 
+// let func = (parameters) => expression;
+
+let sum = (a, b) => a + b;
+
+// arrow functions should not be used as methods and it contains things like : THIS, SUPER, ARGUMENTS
+
+let hello = () => {
+    // return "hello world"; // no need to write 'return' because it returns value by default
+    "hello world";
 }
-function showOk() {
-    console.log("you agreed");
-}
-function showCancel() {
-    console.log("you cancelled");
-}
-askQuestion("do you agree", showOk, showCancel());
+// console.log(hello);
+
+// objects: contains key value pairs
+// let user = new Object();
+let user = {
+    userName: "risabh",
+    age: 20,
+    "fav lang" : "gadwali",
+    "is married" : false,
+    section: "N"
+};
+// access object values
+
+// console.log(user.userName);
+// console.log(user["is married"]); // multi word keys requires square brackets to access
+// remove object element
+delete user.section;
+// let key = {};
+// for (key in user) {
+//     console.log(key);
+// } 
