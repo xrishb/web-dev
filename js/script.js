@@ -169,18 +169,48 @@ delete user.section;
 
 // ASYNC - AWAIT. wait for something but the rest of program will continue except this specific function
 
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+// function delay(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
-// Example async function using await
-async function myAsyncFunction() {
-    console.log("Start");
-    await delay(2000); // Pause for 2 seconds (2000 milliseconds)
-    console.log("Middle");
-    await delay(1000); // Pause for 1 second
-    console.log("End");
-}
+// // Example async function using await
+// async function myAsyncFunction() {
+//     console.log("Start");
+//     await delay(2000); // Pause for 2 seconds (2000 milliseconds)
+//     console.log("Middle");
+//     await delay(1000); // Pause for 1 second
+//     console.log("End");
+// }
 
-// Call the async function
-myAsyncFunction();
+// // Call the async function
+// myAsyncFunction();
+
+
+
+// lets start with some informative data types such as arrays, set, maps, strings, lists
+
+// arrays => let arr = [val1, val2, valN];
+// usually arrays are declared with CONST but lets use LET atm
+let cars = ["volvo", "bmw", "buggati"];
+
+console.log(typeof(cars)); // output : object
+
+// convert arr to strings
+// cars = cars.toString();
+// console.log(typeof(cars)); // output: string
+
+// length method
+console.log("array length: ", cars.length);
+// print entire array at once
+console.log(cars);
+
+// get nth element
+console.log(cars.at(2)); // putput : buggati
+
+// remove element from last
+console.log(cars.pop()); // returns the popped value, will output: buggati
+
+// add an element to the end
+cars.push("lambo"); // will return length of array
+
+
