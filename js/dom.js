@@ -24,3 +24,10 @@ if (hd) {
 } else {
     console.error("Element with class 'hd' not found.");
 }
+
+// event listeners
+// get button with id and use event listeners
+let button = document.getElementById("btn");
+button.onclick =  function() { 
+        alert("button was clicked"); 
+    };
