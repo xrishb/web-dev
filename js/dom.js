@@ -28,6 +28,27 @@ if (hd) {
 // event listeners
 // get button with id and use event listeners
 let button = document.getElementById("btn");
-button.onclick =  function() { 
-        alert("button was clicked"); 
-    };
+// button.onclick =  function() { 
+//         alert("button was clicked"); 
+//     };
+
+// upper syntax was good, but the better approach is :
+
+button.addEventListener("click", function() {
+    alert("event listeners in work");
+});
+// some useful events
+
+button.addEventListener("mouseover", function() {
+    hd.innerHTML = "mouse entered the button border";
+    hd.style.color = "red";
+    hd.style.fontSize = "2rem";
+});
+
+button.addEventListener("mouseout", function() {
+    hd.innerHTML = "mouse left the button ";
+    hd.style.color = "blue";
+    hd.style.fontSize = "1.5rem";
+})
+
+// some others => keydown + eventkey, keyup, input + this.value, scroll, resize, submit, load 
