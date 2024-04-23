@@ -1,0 +1,36 @@
+ * {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+ }
+
+ #myform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 15%;
+ }
+
+#todo {
+    width: 20vw;
+    height: 5vh;
+    text-align: center;
+}
+ .add {
+    margin-top: 2rem;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: rgb(0, 132, 255);
+    border: 1px solid white;
+    border-radius: 12px 12px;
+ }
+
+ .add:hover {
+    background-color: rgb(0, 68, 255);
+    cursor: pointer
+ }
