@@ -3,7 +3,11 @@ document.getElementById("myform").addEventListener("submit", function(event) {
 
     const cardNum = document.getElementById("card-num").value;
     const cardType = validateCardType(cardNum);
-    displayCardType(cardType);
+    if (cardType !== "Unknown") {
+        displayCardType(cardType);
+    } else {
+        displayUnknownCardMessage();
+    }
 });
 
 const visaPattern = /^4[0-9]{12}(?:[0-9]{3})?$/;
@@ -29,4 +33,13 @@ function displayCardType(type) {
     const cardTypeDiv = document.createElement("div");
     cardTypeDiv.textContent = "Card Type: " + type;
     cardInfo.appendChild(cardTypeDiv);
+}
+
+function displayUnknownCardMessage() {
+    const cardInfo = document.querySelector(".card-info");
+    cardInfo.textContent = ""; // Clear previous content
+
+    const unknownCardMessage = document.createElement("div");
+    unknownCardMessage.textContent = "Unknown Card Type. Please enter a valid card number.";
+    cardInfo.appendChild(unknownCardMessage);
 }
