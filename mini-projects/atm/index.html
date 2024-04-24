@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM verifier</title>
+</head>
+<body>
+    <form id="myform">
+        <input type="number" minlength="6" maxlength="21" id="card-num" required>
+        <label for="card-num">card number</label>
+
+        <input type="number" minlength="3" maxlength="6" id="cvv" required>
+        <label for="cvv">cvv</label>
+
+        <input type="date" id="validity" required>
+        <label for="exp-date"></label>
+    </form>
+
+    <div class="card-info"></div>
+</body>
+</html>
