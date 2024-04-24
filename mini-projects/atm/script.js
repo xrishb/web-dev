@@ -1,7 +1,10 @@
-const cardNum = document.getElementById("card-num");
-const cvv = document.getElementById("cvv");
-const validity = document.getElementById("validity");
-const cardInfo = document.querySelector(".card-info");
+document.getElementById("myform").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const cardNum = document.getElementById("card-num").value;
+    const cardType = validateCardType(cardNum);
+    displayCardType(cardType);
+});
 
 const visaPattern = /^4[0-9]{12}(?:[0-9]{3})?$/;
 const mastercardPattern = /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/;
@@ -19,19 +22,11 @@ function validateCardType(cardNumber) {
     }
 }
 
-cardNum.addEventListener("input", function() {
-    const cardType = validateCardType(cardNum.value);
-    displayCardType(cardType);
-});
-
 function displayCardType(type) {
-    const cardTypeElement = document.querySelector(".card-info .card-type");
-    if (cardTypeElement) {
-        cardTypeElement.textContent = type;
-    } else {
-        const cardTypeDiv = document.createElement("div");
-        cardTypeDiv.classList.add("card-type");
-        cardTypeDiv.textContent = type;
-        cardInfo.appendChild(cardTypeDiv);
-    }
+    const cardInfo = document.querySelector(".card-info");
+    cardInfo.textContent = ""; // Clear previous content
+
+    const cardTypeDiv = document.createElement("div");
+    cardTypeDiv.textContent = "Card Type: " + type;
+    cardInfo.appendChild(cardTypeDiv);
 }
