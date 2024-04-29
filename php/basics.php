@@ -16,5 +16,19 @@
     foreach($arr as $val) {
         echo "$val ";
     }
-    
+
+    // conditionals
+    if($isValid == true) {
+        echo "entry granted\n";
+    } elseif($isValid == false) {
+        echo "get out\n";
+    }else {
+        $isValid = true;
+    }
+
+    // for loops
+    for($i = 0; $i < 5; $i++) {
+        echo " i ";
+    }
+
 ?>
