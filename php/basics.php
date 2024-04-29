@@ -31,4 +31,17 @@
         echo " i ";
     }
 
+    // some basic methods
+    var_dum($arr);
+    print_r($arr);
+
+    // associative arrays
+    $data = array(
+        "peter" => 18,
+        "john" => 21,
+        "abdul" => 27,
+        "devpal" => 35
+    );
+
+    print_r($data);
 ?>
