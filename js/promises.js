@@ -39,3 +39,8 @@ promise.
     catch(function(){
         console.log('some error came');
     });
+
+/**
+ * .then() method is called when the promise is resolved or rejected, it takes data from promise and further executes it.
+ * catch() method is used when the promise is rejected or some error has occured in execution.
+ */
