@@ -45,3 +45,24 @@ Dog.prototype = Object.create(Animal.prototype); // Inherit from Animal
 Dog.prototype.constructor = Dog; // Set the constructor property correctly
 
 let dog = new Dog('Buddy', 'Golden Retriever');
+
+// Polymorphic function
+function makeSound(animal) {
+    animal.sound();
+}
+
+// Different objects with a 'sound' method
+let cat = {
+    sound: function() {
+        console.log('Meow!');
+    }
+};
+
+let dogs = {
+    sound: function() {
+        console.log('Woof!');
+    }
+};
+
+makeSound(cat); // Output: Meow!
+makeSound(dogs); // Output: Woof!
