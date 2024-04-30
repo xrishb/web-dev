@@ -23,19 +23,24 @@
 */
 
 let promise = new Promise(function(resolve, reject) {
+    // some async operation going on
     const x = "gfg";
     const y = "gfg";
 
     if(x == y) {
+        // process the data
         resolve();
     } else {
+        // reject the promise
         reject();
     }
 });
 promise.
+    // handle the successful operation
     then(function(){
         console.log('Success');
     }).
+    // handle errors
     catch(function(){
         console.log('some error came');
     });
@@ -43,4 +48,13 @@ promise.
 /**
  * .then() method is called when the promise is resolved or rejected, it takes data from promise and further executes it.
  * catch() method is used when the promise is rejected or some error has occured in execution.
+ * 
+ * 
+ * pretty useful for :
+ * handling HTTP requests
+ * Timers and Delays
+ * File operation
+ * DataBase operations
+ * Animation and UI operations
+ * Fetching remote resources.
  */
