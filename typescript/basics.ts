@@ -59,3 +59,23 @@ enum CardinalDirections {
   console.log(CardinalDirections.North);
   // logs 4
   console.log(CardinalDirections.West);
+
+//   functions
+function getTime() : number {
+    return new Date().getTime();
+}
+
+// void type
+function printHello(): void {
+    console.log('Hello!');
+  }
+
+//   params
+function multiply(a: number, b: number) {
+    return a * b;
+  }
+
+//   optional params with ?
+function add(a: number, b: number, c?: number) {
+    return a + b + (c || 0);
+  }
