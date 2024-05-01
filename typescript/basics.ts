@@ -26,3 +26,10 @@ nums.push(2);
 // readonly keyword prevents an array from being changed
 const names : readonly string[] = ['morris'];
 
+
+// tuples
+let details: [number, string];
+details = [5, 'dianosaur'];
+
+// readonly tuple
+const detail : readonly [number, string] = [5, 'huhue'];
