@@ -19,3 +19,10 @@ a = function() {
 }
 
 // arrays
+const nums : number[] = [];
+nums.push(1);
+nums.push(2);
+
+// readonly keyword prevents an array from being changed
+const names : readonly string[] = ['morris'];
+
