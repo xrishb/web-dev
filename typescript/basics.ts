@@ -33,3 +33,29 @@ details = [5, 'dianosaur'];
 
 // readonly tuple
 const detail : readonly [number, string] = [5, 'huhue'];
+
+// objects
+
+const car: { type: string, model: string, year: number } = {
+    type: "Toyota",
+    model: "Corolla",
+    year: 2009
+  };
+
+//   const car = {
+//     type: "Toyota",
+//   };
+//   car.type = "Ford";
+//   car.type = 2; will generate error
+
+// enums
+enum CardinalDirections {
+    North = 1,
+    East,
+    South,
+    West
+  }
+  // logs 1
+  console.log(CardinalDirections.North);
+  // logs 4
+  console.log(CardinalDirections.West);
