@@ -1,68 +1,86 @@
-// object literal
+// object is collection of properties, in a key value pair
+
+
+// create an object
+const student = {
+    // key: value
+    firstName: 'jack',
+    age: 21
+};
+console.log(student);
+
+// access a single property
+
+student.age = 22;
+console.log(student.age);
+
+// we can also assume that keys are index names and values are the values stored in that index, so we can access values as:
+console.log(student['firstName']);
+
+// add properties to it
+student.section = 'A';
+student.id = 911230;
+
+console.log(student);
+
+// delete a property
+delete student.section;
+
+// objects can have functions as well
+
 const person = {
-    name: 'John',
-    age: 30,
-    isMarried: false,
-    greet: function() {console.log('moshi moshi');}
-}
+    id: 720,
+    firstname: 'dino',
 
-// constructor function
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    this.greet = function() {
-        console.log('moshi moshi from constructor');
-    }
-}
-
-let john = new Person('john', 25);
-john.greet();
-
-/*
-    Each JavaScript object has a prototype, which is another object that it inherits properties and methods from. You can add properties and methods to an object's prototype to share them among all instances of that object.
-*/
-
-// Adding a method to the Person prototype
-Person.prototype.sayAge = function() {
-    console.log(`I am ${this.age} years old.`);
-};
-
-john.sayAge(); // Output: I am 30 years old.
-
-
-// Parent constructor function
-function Animal(name) {
-    this.name = name;
-}
-
-// Child constructor function
-function Dog(name, breed) {
-    Animal.call(this, name); // Call the parent constructor
-    this.breed = breed;
-}
-
-Dog.prototype = Object.create(Animal.prototype); // Inherit from Animal
-Dog.prototype.constructor = Dog; // Set the constructor property correctly
-
-let dog = new Dog('Buddy', 'Golden Retriever');
-
-// Polymorphic function
-function makeSound(animal) {
-    animal.sound();
-}
-
-// Different objects with a 'sound' method
-let cat = {
-    sound: function() {
-        console.log('Meow!');
+    // the keyword 'this' targets the properties of the same object. by using 'this' keyword we can access the object's properties
+    greet: function() {
+       return console.log('hello ' + this.firstname);
     }
 };
 
-let dogs = {
-    sound: function() {
-        console.log('Woof!');
+person.greet();
+
+// constructors are used to create a new object 
+
+// create a constructor function, with some params
+function Job(p_job, p_wage) {
+    this.job = p_job,
+    this.wage = p_wage;
+};
+
+// create a new object of Job
+
+// traditionally
+const jobs = new Job();
+jobs.job = 'huehe';
+jobs.wage = 100;
+
+// alternatively
+const military = new Job('wingman', 1000);
+
+console.log(jobs);
+console.log(military);
+
+// default js constructors : string, boolean, number, object
+
+// get and set methods
+// object functions are accessed with their names, and not as method 
+const employee = {
+    firstName: 'ram',
+
+    // get method
+    // dont access value as method.
+    get getName() {
+        return this.firstName;
+    },
+
+    // set method is used to set values of a property
+    set setName(newName) {
+        this.firstName = newName;
     }
 };
 
-makeSound(cat); // Output: Meow!
-makeSound(dogs); // Output: Woof!
+let namess = employee.getName;
+console.log(namess);
+
+employee.setName = 'maya';
