@@ -21,6 +21,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 30%;
+    background-color: #e6e6e6;
 }
-.item-image {
+
+
+.item-description {
+    
 }
